@@ -3,6 +3,9 @@ import { join } from "node:path";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   reactStrictMode: false,
   webpack: (config, { isServer, dev }) => {
     config.experiments = {

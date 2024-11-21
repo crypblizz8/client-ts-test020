@@ -1,6 +1,6 @@
 "use client";
 
-import { useNilStoreValues,  } from "@nillion/client-react-hooks";
+import { useNilStoreValues } from "@nillion/client-react-hooks";
 import { NadaValue, Uuid } from "@nillion/client-vms";
 import { type ChangeEvent, type FC, useState } from "react";
 
