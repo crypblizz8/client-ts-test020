@@ -14,6 +14,12 @@ const nextConfig = {
 
     config.cache = false;
 
+    // workaround for failure during build
+    // eg ./node_modules/.pnpm/@noble+curves@1.6.0/node_modules/@noble/curves/esm/secp256k1.js + 6 modules Unexpected end of JSON input 
+    if (!dev) {
+      config.optimization.concatenateModules = false
+    }
+
     // fix warnings for async functions in the browser (https://github.com/vercel/next.js/issues/64792)
     if (!isServer) {
       config.output.environment = {
