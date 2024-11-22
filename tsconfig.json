@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,11 +23,9 @@
       }
     ],
     "paths": {
-      "#/*": ["./app/*"],
-      "@nillion/client-vms/*": ["../client-vms/src/*"],
-      "@nillion/client-vms": ["../client-vms"],
-      "@nillion/client-react-hooks/*": ["../client-react-hooks/src/*"],
-      "@nillion/client-react-hooks": ["../client-react-hooks"]
+      "#/*": [
+        "./app/*"
+      ],
     }
   },
   "include": [
@@ -33,5 +35,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

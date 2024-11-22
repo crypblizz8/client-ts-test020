@@ -2,10 +2,9 @@
 
 import {
   useNilInvokeCompute,
-  useNilOverwritePermissions,
   useNillion,
 } from "@nillion/client-react-hooks";
-import { NadaValue, ProgramId, Uuid } from "@nillion/client-vms";
+import { NadaValue, ProgramId } from "@nillion/client-vms";
 import { type ChangeEvent, type FC, useState } from "react";
 
 export const InvokeCompute: FC = () => {

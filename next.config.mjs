@@ -3,9 +3,6 @@ import { join } from "node:path";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   reactStrictMode: false,
   webpack: (config, { isServer, dev }) => {
     config.experiments = {
@@ -16,6 +13,12 @@ const nextConfig = {
     };
 
     config.cache = false;
+
+    // workaround for failure during build
+    // eg ./node_modules/.pnpm/@noble+curves@1.6.0/node_modules/@noble/curves/esm/secp256k1.js + 6 modules Unexpected end of JSON input 
+    if (!dev) {
+      config.optimization.concatenateModules = false
+    }
 
     // fix warnings for async functions in the browser (https://github.com/vercel/next.js/issues/64792)
     if (!isServer) {
