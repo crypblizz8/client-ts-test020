@@ -1,8 +1,6 @@
 "use client";
 
 import {
-  useNilInvokeCompute,
-  useNilOverwritePermissions,
   useNilRetrieveComputeResults,
 } from "@nillion/client-react-hooks";
 import { Uuid } from "@nillion/client-vms";
